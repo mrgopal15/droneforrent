@@ -1,0 +1,483 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: url('map.jpg') top center no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.user-wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.user-wrapper .MuiGrid-item {
+  height: 100vh;
+}
+
+.user-wrapper .bg-image {
+  background: url('bg.jpg') top center no-repeat;
+  background-size: cover;
+}
+
+.station {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url('marker.png') top center no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+#alpha {
+  top: 45%;
+  right: 20%;
+}
+
+#beta {
+  top: 60%;
+  right: 50%;
+}
+
+#gamma {
+  top: 40%;
+  right: 80%;
+}
+
+.ReactModal__Content h2 {
+  margin: 0 0 20px;
+  font-weight: 400;
+  position: relative;
+}
+
+.ReactModal__Content h2 button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: -13px;
+  top: -4px;
+}
+
+.ReactModal__Content h2 button i {
+  font-size: 34px;
+}
+
+.ReactModal__Content img {
+  width: 50px;
+}
+
+.MuiPaper-elevation1 {
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.MuiBadge-badge {
+  top: 5px !important;
+  right: -40px !important;
+  padding: 0 8px !important;
+  font-size: 0.65rem !important;
+  text-transform: uppercase;
+  border-radius: 5px !important;
+  background: #737373 !important;
+}
+
+.ReactModal__Content p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ReactModal__Content p small {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.ReactModal__Content p.battery-wrapper {
+  margin: 0;
+}
+
+.ReactModal__Content p.battery-wrapper .battery {
+  width: 20px;
+  height: 12px;
+  border: 1px #048604 solid;
+  border-radius: 2px;
+  position: relative;
+  margin-right: 8px;
+  display: inline-block;
+  top: 2px;
+}
+
+.ReactModal__Content p.battery-wrapper .battery.charging {
+  animation: charge 5s linear infinite;
+}
+
+.ReactModal__Content p.battery-wrapper .battery.charged {
+  box-shadow: inset 4rem 0 0 #048604;
+}
+
+.ReactModal__Content p.battery-wrapper .battery:after {
+  width: 3px;
+  height: 9px;
+  background-color: #048604;
+  border-radius: 0 1px 1px 0;
+  position: absolute;
+  content: "";
+  top: 2px;
+  right: -4px;
+}
+
+.header {
+  text-align: center;
+  width: 100;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 5px 0 10px;
+  display: inline-block;
+  background: #fff;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
+}
+
+.header h1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform-origin: bottom right;
+  transform: skew(20deg, 0deg);
+}
+
+.header h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #fff;
+  transform-origin: bottom left;
+  transform: skew(-20deg, 0deg);
+}
+
+.header h1 img {
+  width: 35px;
+  margin: 0 15px;
+  position: relative;
+  top: 6px;
+}
+
+.MuiButton-sizeSmall {
+  margin-top: -30px !important;
+  float: right;
+  background-color: #f44336 !important;
+  color: #fff !important;
+}
+
+.MuiButtonBase-root.Mui-disabled {
+  cursor: not-allowed !important;
+  pointer-events: initial !important;
+  opacity: .7;
+}
+
+.form-block {
+  position: relative;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  width: 55%;
+  left: 50%;
+  text-align: center;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.form p {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.form h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+
+.form h1 img {
+  width: 35px;
+  margin: 0 15px;
+  position: relative;
+  top: 6px;
+}
+
+.form .form-btn {
+  margin: 10px 0 15px;
+  color: #fff !important;
+  background-color: #f44336 !important;
+}
+
+.form .footer a {
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin: 0 0 10px;
+  color: #777;
+} 
+
+.form .footer a:hover {
+  text-decoration: underline;
+}
+
+.MuiFormControl-marginNormal {
+  margin-top: 0px !important;
+}
+
+.MuiFormLabel-root {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+.alert {
+  margin-bottom: 13px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.1), 0px 2px 2px 0px rgba(0,0,0,0.12), 0px 3px 1px -2px rgba(0,0,0,0.1);
+}
+
+.alert p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400 !important;
+}
+
+.alert.danger {
+  color: #721c24;
+  background-color: #f8d7da;
+}
+
+.alert.success {
+  color: #155724;
+  background-color: #d4edda;
+}
+
+.alert.info {
+  color: #004085;
+  background-color: #cce5ff;
+}
+
+.profile {
+  float: right;
+  padding: 15px 30px;
+}
+
+.profile .MuiAvatar-root {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
+}
+
+.profile p {
+  font-weight: 500;
+  margin: 8px 0;
+  text-transform: uppercase;
+}
+
+.header h1.pull-right {
+  margin-right: -70px;
+}
+
+.profile .MuiButton-sizeSmall {
+  margin-top: 0px !important;
+  float: none;
+}
+
+.ReactModal__Content img.flying {
+  width: 250px;
+  display: block;
+  margin: -35px auto -20px;
+}
+
+.MuiListItemAvatar-root {
+  position: relative;
+  right: -5px;
+}
+
+.MuiListItem-gutters {
+  float: left !important;
+  width: 50% !important;
+  border: 1px solid #ddd;
+  border-right: none;
+}
+
+.MuiList-root {
+  overflow: hidden;
+  margin-bottom: 10px !important;
+}
+
+.MuiList-root li:last-child {
+  border-right: 1px solid #ddd;
+}
+
+.MuiListItemText-secondary {
+  margin: 0 !important;
+}
+
+.btn {
+  background-color: #f44336 !important;
+  color: #fff !important; 
+}
+
+.btn-flying {
+  display: block !important;
+  margin: 0 auto 15px !important;
+}
+
+#message-id {
+  font-size: 13px;
+}
+
+#message-id i {
+  font-size: 22px;
+  position: relative;
+  top: 6px;
+  right: 4px;
+}
+
+.MuiSnackbarContent-message {
+  padding: 0 !important;
+  top: -4px;
+  position: relative;
+}
+
+@keyframes charge {
+  0% {
+    box-shadow: inset 0 0 0 #048604;
+  }
+
+  100% {
+    box-shadow: inset 4rem 0 0 #048604;
+  }
+}
+
+@media only screen and (max-width: 1150px) { 
+  .form {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .ReactModal__Content {
+    width: 70% !important;
+  }
+
+  .user-wrapper .bg-image {
+    display: none;
+  }
+
+  .user-wrapper .MuiGrid-item {
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ReactModal__Content {
+    width: 90% !important;
+  }
+
+  .ReactModal__Content h2 {
+    font-size: 18px;
+    margin-bottom: 13px;
+  }
+
+  .ReactModal__Content h2 button i {
+    font-size: 26px;
+  }
+
+  .station {
+    width: 40px;
+    height: 40px;
+  }
+
+  #gamma {
+    top: 40%;
+    right: 70%;
+  }
+
+  .header h1.pull-right {
+    margin-right: 0;
+  }
+
+  .header h1,
+  .form h1 {
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .header h1 img,
+  .form h1 img {
+    width: 30px;
+    top: 5px;
+  }
+
+  .form h1 img {
+    top: 7px;
+  }
+
+  .form p {
+    font-size: 14px;
+  }
+
+  .MuiButton-sizeSmall {
+    margin-top: 10px !important;
+  }
+
+  .header h1::before,
+  .header h1::after {
+    display: none;
+  }
+
+  .form {
+    width: 85%;
+  }
+
+  .alert p {
+    line-height: 24px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .ReactModal__Content {
+    width: 85% !important;
+  }
+
+  .MuiListItem-gutters {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    width: 100% !important;
+  }
+
+  .MuiList-root {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
